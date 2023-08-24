@@ -41,25 +41,21 @@ const membersTeam = [
   },
 ];
 
-for (const member in membersTeam) {
+for (const member of membersTeam) {
   container.innerHTML += `
   <div class="col-4">
-    <div class="card mx-auto my-3" style="width: 18rem;">
-        <img src="./IMG/${membersTeam[member].foto}" alt="img profilo di: ${membersTeam[member].nome}" class="card-img-top d-block">
-        <div class="card-body">
-            <p class="card-text text-center">${membersTeam[member].nome}</p>
-            <p class="card-text text-center">${membersTeam[member].ruolo}</p>
-        </div>
+    <div class="card mx-auto my-4" style="width: 22rem;">
+        
+            <img src="./IMG/${member.foto}" alt="img profilo di: ${member.nome}" class="card-img-top d-block">
+         <div class="card-text">
+            <p class="">${member.nome}</p>
+            <p class=" ">${member.ruolo}</p>
+        </div></div>
+       
     </div>
     </div>`;
 
-  console.log(
-    membersTeam[member].nome +
-      " " +
-      membersTeam[member].ruolo +
-      " " +
-      membersTeam[member].foto
-  );
+  console.log(member.nome + " " + member.ruolo + " " + member.foto);
 }
 
 // console.log(membersTeam);
