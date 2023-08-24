@@ -44,7 +44,8 @@ const membersTeam = [
 for (const member in membersTeam) {
   container.innerHTML += `
     <div class="col-4 my-2">
-    ${membersTeam[member].foto}
+    <img src="./IMG/${membersTeam[member].foto}" alt="img profilo di: ${membersTeam[member].nome}" class="rounded mx-auto d-block w-75">
+    
     ${membersTeam[member].nome}
     ${membersTeam[member].ruolo}
     </div>`;
