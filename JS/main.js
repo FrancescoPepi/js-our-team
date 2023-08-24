@@ -1,4 +1,8 @@
-let membersTeam = [
+// recupero DOM
+const container = document.getElementById("container-card");
+
+// ARRAY CON ALL'INTERNO OBJECTS
+const membersTeam = [
   {
     numero: "01",
     nome: "Wayne Barnett",
@@ -37,7 +41,13 @@ let membersTeam = [
   },
 ];
 
-for (let member in membersTeam) {
+for (const member in membersTeam) {
+  container.innerHTML += `
+    <div class="col-4 my-2">
+    ${membersTeam[member].foto}
+    ${membersTeam[member].nome}
+    ${membersTeam[member].ruolo}
+    </div>`;
   console.log(
     membersTeam[member].nome +
       " " +
